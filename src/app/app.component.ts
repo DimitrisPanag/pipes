@@ -11,6 +11,14 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   name!: string;
   date!: string;
+  amount!: number;
+  height!: number;
+  
+
+  onHeightChange(target: EventTarget){
+    const value = (<HTMLInputElement>target).value;
+    this.height = parseFloat(value);
+  }
 
   onNameChange(target: EventTarget){
     const value = (<HTMLInputElement>target).value;
@@ -20,5 +28,10 @@ export class AppComponent {
   onDateChange(target: EventTarget){
     const value = (<HTMLInputElement>target).value;
     this.date = value;
+  }
+
+  onAmountChange(target: EventTarget){
+    const value = (<HTMLInputElement>target).value;
+    this.amount = parseFloat(value);
   }
 }

@@ -3,14 +3,28 @@
 
   <div class="row">
     <div class="form-group col">
-     <label>Payee Name</label>
+     <label>Receiver Name</label>
      <input class="form-control" (input)="onNameChange($event.target!)" />
     </div>
 
     <div class="col">
-      <label><b>Name</b></label>
+      <label><b>Receiver Name</b></label>
       <div>
         {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+     <label>Payment Date</label>
+     <input type="date" class="form-control" (input)="onDateChange($event.target!)" />
+    </div>
+
+    <div class="col">
+      <label><b>Payment Date</b></label>
+      <div>
+        {{ date | date: "MMMM d, y" }}
       </div>
     </div>
   </div>

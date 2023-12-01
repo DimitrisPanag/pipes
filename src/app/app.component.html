@@ -28,4 +28,32 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+     <label>Payment Amount</label>
+     <input class="form-control" (input)="onAmountChange($event.target!)" />
+    </div>
+
+    <div class="col">
+      <label><b>Payment Amount</b></label>
+      <div>
+        {{ amount | currency: "EUR" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+     <label>Height</label>
+     <input class="form-control" (input)="onHeightChange($event.target!)" />
+    </div>
+
+    <div class="col">
+      <label><b>Payment Amount</b></label>
+      <div>
+        {{ height | number: "1.1-3" }}
+      </div>
+    </div>
+  </div>
 </div>
